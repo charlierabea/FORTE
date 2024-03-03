@@ -260,7 +260,7 @@ def parse_args():
     parser.add_argument(
         "--external_save_dir",
         type=str,
-        default="/raid/jupyter-alz.ee09/Otter_checkpoints/",
+        default="/xx/checkpoints/",
         help="to store the checkpoint",
     )
     parser.add_argument(
