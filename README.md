@@ -4,10 +4,10 @@
 </p>
 In the realm of medical imaging diagnostics, Medical Multi-modal Large Language Models (Med-MLLMs) have made significant advancements across various benchmarks. However, the application of Med-MLLMs for producing reports from three-dimensional computed tomography (CT) remains underexplored. To address this gap, we we trained and evaluated four multi-image instruction tuning (MIIT) models using both NLP instructions (Plain, In-context) and clinical-based instructions (Template-guided, RADICAL-aware) across a substantial dataset comprising 18,885 text-scan pairs. We further introduced RADiology Item CALling (RADICAL), a novel scoring system based on four categories (Degree, Landmark, Feature, and Impression) of clinical keywords. The tailored clinical thought-based evaluation system was proposed to replace traditional natural language processing (NLP) metric, addressing concerns that Med-MLLMs might prioritize mathematical optimization rather than clinical applicability. The reproducibility of these models and the scoring system was validated using the CQ500 dataset. Last, we conducted a Turing test and a linguistic questionnaire among specialized physician raters to gather analytical insights into the effectiveness of evaluation metrics and expert perspectives on discrepancies between human and model-generated CT reports. 
 
-
+## Code
 > this repository is modified from https://github.com/Luodian/Otter
 
-## Environments
+## Set-up
 
 1. Compare cuda version returned by nvidia-smi and nvcc --version. They need to match. Or at least, the version get by nvcc --version should be <= the version get by nvidia-smi.
 2. Install the pytorch that matches your cuda version. (e.g. cuda 11.7 torch 2.0.0). We have successfully run this code on cuda 11.1 torch 1.10.1 and cuda 11.7 torch 2.0.0. You can refer to PyTorch's documentation, [Latest](https://pytorch.org/) or [Previous](https://pytorch.org/get-started/previous-versions/).
@@ -32,7 +32,7 @@ Eg:
 --wandb_project=OTTER-LLaMA7B-MED_CLIP \
 
 ## Evaluation
-#1. Generate reports
+### 1. Generate reports
 bash /evaluation/eval.sh
 Check the 
 (1) eval.py file: change the excel path and prompt
@@ -47,14 +47,14 @@ python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/Otter_checkpoints/0925_
 Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
 The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
 
-#2. Automatic Evaluation
+### 2. Automatic Evaluation
 /xx/evaluation/automatic_evaluation.py
 
-#3. Sentence pairing and Aggregation
+### 3. Sentence pairing and Aggregation
 /xx/evaluation/sentence_pairing.py
 
-#4. RADICAL Evaluation
+### 4. RADICAL Evaluation
 /xx/evaluation/RADICAL.py
 
-#5. Evaluating(5)— Negation removal
+### 5. Negation removal
 /xx/evaluation/Negation_removal.py
