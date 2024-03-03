@@ -1,6 +1,6 @@
 # RADiology Item CALling (RADICAL): Evaluating Multi-Image Instruction Tuning(MIIT) in Brain Computed Tomography(CT) Reports
 <p align="center" width="100%">
-<img src="https://i.postimg.cc/MKmyP9wH/new-banner.png"  width="80%" height="80%">
+<img src="RADICAL.png"  width="80%" height="80%">
 </p>
 In the realm of medical imaging diagnostics, Medical Multi-modal Large Language Models (Med-MLLMs) have made significant advancements across various benchmarks. However, the application of Med-MLLMs for producing reports from three-dimensional computed tomography (CT) remains underexplored. To address this gap, we we trained and evaluated four multi-image instruction tuning (MIIT) models using both NLP instructions (Plain, In-context) and clinical-based instructions (Template-guided, RADICAL-aware) across a substantial dataset comprising 18,885 text-scan pairs. We further introduced RADiology Item CALling (RADICAL), a novel scoring system based on four categories (Degree, Landmark, Feature, and Impression) of clinical keywords. The tailored clinical thought-based evaluation system was proposed to replace traditional natural language processing (NLP) metric, addressing concerns that Med-MLLMs might prioritize mathematical optimization rather than clinical applicability. The reproducibility of these models and the scoring system was validated using the CQ500 dataset. Last, we conducted a Turing test and a linguistic questionnaire among specialized physician raters to gather analytical insights into the effectiveness of evaluation metrics and expert perspectives on discrepancies between human and model-generated CT reports. 
 
@@ -44,7 +44,7 @@ If your checkpoint's not a hf folder, use this converter:
 python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/Otter_checkpoints/0925_OTTER_CLIP_ABC/final_weights.pt --new_hf_path=/xx/checkpoints/checkpoint_hf/ --pretrained_model_path=/xx/Otter_checkpoints/OTTER-MPT7B-Init/
 
 Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
-The CQ500 external validation dataset can be downloaded at [http://headctstudy.qure.ai/#dataset]
+The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
 
 ## Evaluating(2)- Automatic Evaluation
 /xx/evaluation/automatic_evaluation.py
