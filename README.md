@@ -31,7 +31,8 @@ Eg:
 --run_name=OTTER-LLaMA7B-MED_CLIP \
 --wandb_project=OTTER-LLaMA7B-MED_CLIP \
 
-## Evaluating(1)— Generate reports
+## Evaluation
+#1. Generate reports
 bash /evaluation/eval.sh
 Check the 
 (1) eval.py file: change the excel path and prompt
@@ -46,14 +47,14 @@ python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/Otter_checkpoints/0925_
 Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
 The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
 
-## Evaluating(2)- Automatic Evaluation
+#2. Automatic Evaluation
 /xx/evaluation/automatic_evaluation.py
 
-## Evaluation(3)- Sentence pairing and Aggregation
+#3. Sentence pairing and Aggregation
 /xx/evaluation/sentence_pairing.py
 
-## Evaluating(4)- RADICAL Evaluation
+#4. RADICAL Evaluation
 /xx/evaluation/RADICAL.py
 
-## Evaluating(5)— Negation removal
+#5. Evaluating(5)— Negation removal
 /xx/evaluation/Negation_removal.py
