@@ -22,7 +22,7 @@ The directory for the data formation is at /MIIT/mimic-it/convert-it/, and the m
 ## Multi-image instruction-tuning (MIIT)
 The MIIT baseline checkpoint is at [luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init)]
 
-bash /MIIT/0924_train_baseline.sh (or any other variation)
+bash /MIIT/train.sh
 
 1. The external checkpoint folder arg should be checked
 2. —run_name is the checkpoint name, need to be modified(also change the project name):
