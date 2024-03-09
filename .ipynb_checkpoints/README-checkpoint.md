@@ -39,10 +39,10 @@ Check the
 (2) checkpoint(must be hf folders)
 (3) mimicit_path: the corresponding prompt variation
 
-If your checkpoint's not a hf folder, use this converter:
+If your checkpoint's not a "hf" folder, use this converter:
 /xx/evaluation/otter/converting_otter_pt_to_hf.py
 
-python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/Otter_checkpoints/0925_OTTER_CLIP_ABC/final_weights.pt --new_hf_path=/xx/checkpoints/checkpoint_hf/ --pretrained_model_path=/xx/Otter_checkpoints/OTTER-MPT7B-Init/
+python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/checkpoints/{checkpoint_name}_hf/final_weights.pt --new_hf_path=/xx/checkpoints/{checkpoint_name}_hf/ --pretrained_model_path=/xx/checkpoints/OTTER-MPT7B-Init/
 
 Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
 The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
