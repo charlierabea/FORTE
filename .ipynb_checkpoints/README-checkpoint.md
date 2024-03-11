@@ -52,7 +52,7 @@ The CQ500 external validation dataset can be requested at [http://headctstudy.qu
 
 ### 2. Automatic Evaluation
 ```
-python3 xx/evaluation/automatic_evaluation.py
+python3 /xx/evaluation/automatic_evaluation.py
 ```
 
 ### 3. Sentence pairing and Aggregation
