@@ -48,13 +48,19 @@ Our instruction-tuned model can be downloaded at [https://drive.google.com/drive
 The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
 
 ### 2. Automatic Evaluation
-/xx/evaluation/automatic_evaluation.py
+'''
+python3 xx/evaluation/automatic_evaluation.py
+'''
 
 ### 3. Sentence pairing and Aggregation
-/xx/evaluation/sentence_pairing.py
-
+'''
+python3 /xx/evaluation/sentence_pairing.py
+'''
 ### 4. RADICAL Evaluation
-/xx/evaluation/RADICAL.py
+'''
+python3 /xx/evaluation/RADICAL.py
 
 ### 5. Negation removal
-/xx/evaluation/Negation_removal.py
+'''
+python3 /xx/evaluation/Negation_removal.py
+'''
