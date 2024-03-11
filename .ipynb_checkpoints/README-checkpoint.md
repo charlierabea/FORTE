@@ -22,7 +22,7 @@ The directory for the data formation is at /MIIT/mimic-it/convert-it/, and the m
 ## Multi-image instruction-tuning (MIIT)
 The MIIT baseline checkpoint is at [luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init)]
 ```
-bash /MIIT/train.sh
+bash /xx/MIIT/train.sh
 ```
 
 1. The external checkpoint folder arg should be checked
@@ -34,7 +34,9 @@ Eg:
 
 ## Evaluation
 ### 1. Generate reports
-bash /evaluation/eval.sh
+```
+bash /xx/evaluation/eval.sh
+```
 Check the 
 (1) eval.py file: change the excel path and prompt
 (2) checkpoint(must be hf folders)
