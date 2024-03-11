@@ -21,8 +21,9 @@ The directory for the data formation is at /MIIT/mimic-it/convert-it/, and the m
 
 ## Multi-image instruction-tuning (MIIT)
 The MIIT baseline checkpoint is at [luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init)]
-
+```
 bash /MIIT/train.sh
+```
 
 1. The external checkpoint folder arg should be checked
 2. —run_name is the checkpoint name, need to be modified(also change the project name):
@@ -40,27 +41,31 @@ Check the
 (3) mimicit_path: the corresponding prompt variation
 
 If your checkpoint's not a "hf" folder, use this converter:
-/xx/evaluation/otter/converting_otter_pt_to_hf.py
 
+/xx/evaluation/otter/converting_otter_pt_to_hf.py
+```
 python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/checkpoints/{checkpoint_name}/final_weights.pt --new_hf_path=/xx/checkpoints/{checkpoint_name}_hf/ --pretrained_model_path=/xx/checkpoints/OTTER-MPT7B-Init/
+```
 
 Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
 The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
 
 ### 2. Automatic Evaluation
-'''
+```
 python3 xx/evaluation/automatic_evaluation.py
-'''
+```
 
 ### 3. Sentence pairing and Aggregation
-'''
+```
 python3 /xx/evaluation/sentence_pairing.py
-'''
+```
+
 ### 4. RADICAL Evaluation
-'''
+```
 python3 /xx/evaluation/RADICAL.py
+```
 
 ### 5. Negation removal
-'''
+```
 python3 /xx/evaluation/Negation_removal.py
-'''
+```
