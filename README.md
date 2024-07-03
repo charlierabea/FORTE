@@ -2,7 +2,7 @@
 <p align="center" width="100%">
 <img src="overview.png"  width="80%" height="80%">
 </p>
-[Paper Link](https://arxiv.org/abs/2407.02235 "Google's Homepage")
+[Paper Link](https://arxiv.org/abs/2407.02235)
 
 ## Code
 > this repository is modified from https://github.com/Luodian/Otter
