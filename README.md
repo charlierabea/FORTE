@@ -26,7 +26,7 @@ bash /xx/MIIT/train.sh
 ```
 
 1. The external checkpoint folder arg should be checked
-2. —run_name is the checkpoint name, need to be modified(also change the project name):
+2. —run_name is the checkpoint name, need to be modified (also change the project name):
 Eg:
 --wandb_entity=TPEVGH_big_data_center \
 --run_name=OTTER-LLaMA7B-MED_CLIP \
@@ -38,7 +38,7 @@ Eg:
 bash /xx/evaluation/eval.sh
 ```
 Check the 
-(1) eval.py file: change the excel path and prompt
+(1) eval.py file: change the excel path and instruction
 (2) checkpoint(must be hf folders)
 (3) mimicit_path: the corresponding prompt variation
 
