@@ -1,10 +1,10 @@
 export PYTHONPATH=.
 
-CUDA_VISIBLE_DEVICES=0,1 accelerate launch --config_file=./pipeline/accelerate_configs/accelerate_config_fsdp.yaml \
-pipeline/train/instruction_following.py \
+CUDA_VISIBLE_DEVICES=0,1 accelerate launch --config_file=./MIIT/pipeline/accelerate_configs/accelerate_config_fsdp.yaml \
+./MIIT/pipeline/train/instruction_following.py \
 --pretrained_model_name_or_path="/xx/checkpoints/OTTER-MPT7B-Init" \
---mimicit_path="/xx/data/MED_instruction.json" \
---images_path="/xx/data/MED_instruction.json" \
+--mimicit_path="./data/MED_instruction.json" \
+--images_path="./data/MED.json" \
 --batch_size=1 \
 --gradient_accumulation_steps=4 \
 --num_epochs=3 \
