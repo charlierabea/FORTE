@@ -183,7 +183,7 @@ def train_one_epoch(args, model, epoch, mimicit_loaders, tokenizer, optimizer, l
     # print(generated_captions)
     df_data = [(key, val[0], val[1]) for key, val in generated_captions.items()]
     df = pd.DataFrame(df_data, columns=['id', 'gt', 'parsed_output'])
-    df.to_excel("/xx/excel/generated_reports.xlsx", index=False)
+    df.to_excel("./output/generated_reports.xlsx", index=False)
 
 
 def parse_args():
