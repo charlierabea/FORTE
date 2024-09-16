@@ -63,7 +63,7 @@ python3 sentence_pairing.py
 python3 FORTE.py
 ```
 
-### 5. Negation removal
+### 4. Negation removal
 ```
 python3 Negation_removal.py
 ```
