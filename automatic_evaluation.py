@@ -3,7 +3,7 @@ import json
 from pycocotools.coco import COCO
 from tqdm import tqdm
 from pycocoevalcap.eval import COCOEvalCap
-from coco_metric import compute_cider, postprocess_captioning_generation
+from evaluation.pipeline.eval.coco_metric import compute_cider, postprocess_captioning_generation
 import numpy as np
 import collections
 
