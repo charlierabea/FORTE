@@ -1,4 +1,4 @@
-name: otter
+name: forte
 channels:
   - defaults
 dependencies:

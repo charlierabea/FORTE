@@ -83,8 +83,8 @@ def evaluate(data, annotations_path, results_path):
     return data
 
 # Paths for temporary files
-annotations_path = 'temp_annotations.json'
-results_path = 'temp_results.json'
+annotations_path = './data/temp_annotations.json'
+results_path = './data/temp_results.json'
 
 # Load data
 excel_file_path = './excel_files/evaluation_examples.xlsx'
