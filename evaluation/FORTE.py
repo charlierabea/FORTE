@@ -65,14 +65,14 @@ def process_excel(filename, json_data):
         xls[sheet_name] = process_excel_sheet(sheet_df, json_data)
 
     # Save modified sheets back to the Excel file
-    with pd.ExcelWriter("/xx/sentencepaired_reports_RADICAL.xlsx") as writer:
+    with pd.ExcelWriter("./excel_files/evaluation_examples/FORTE_evaluated.xlsx") as writer:
         for sheet_name, sheet_df in xls.items():
             sheet_df.to_excel(writer, sheet_name=sheet_name, index=False)
     
 
 # Load JSON data
-with open('./RADICALchecked.json', 'r') as f:
+with open('./data/FORTE_brain.json', 'r') as f:
     json_data = json.load(f)
 
-filename = '/xx/sentencepaired_reports.xlsx'
+filename = './excel_files/evaluation_examples/sentencepaired_reports.xlsx'
 process_excel(filename, json_data)
