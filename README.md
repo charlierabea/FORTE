@@ -15,6 +15,7 @@ conda env create -f environment.yml
 ## Generate reports
 ### Download Files
 Place our instruction-tuned model [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link] at **./checkpoint/** folder
+
 Place the CQ500 external validation dataset (instruction [https://drive.google.com/file/d/16W2eoevPB74JN1rJT58hekHMwXL2g6RY/view?usp=drive_link]/ image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link], both derived from [http://headctstudy.qure.ai/#dataset]) at the **./data/** folder
 ```
 bash ./eval.sh
