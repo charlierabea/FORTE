@@ -7,67 +7,41 @@
 ## Code
 > this repository is modified from https://github.com/Luodian/Otter
 
-## Set-up
-
-1. Compare cuda version returned by nvidia-smi and nvcc --version. They need to match. Or at least, the version get by nvcc --version should be <= the version get by nvidia-smi.
-2. Install the pytorch that matches your cuda version. (e.g. cuda 11.7 torch 2.0.0). We have successfully run this code on cuda 11.1 torch 1.10.1 and cuda 11.7 torch 2.0.0. You can refer to PyTorch's documentation, [Latest](https://pytorch.org/) or [Previous](https://pytorch.org/get-started/previous-versions/).
-3. You may install via `conda env create -f environment.yml`. Especially to make sure the `transformers>=4.28.0`, `accelerate>=0.18.0`.
-
-## Data preparation
-Please refer to https://github.com/Luodian/Otter/issues/234#issuecomment-1665564520 to see the instructions from the original author of Otter
-The directory for the data formation is at /MIIT/mimic-it/convert-it/, and the mode is ## Spot The Difference (Subtle Difference Version) 
-
-<hints>: "short_name" should be specified at /MIIT/mimic-it/convert-it/datasets/change.py
-
-## Multi-image instruction-tuning (MIIT)
-The MIIT baseline checkpoint is at [luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init)]
+## Set-up Environment
 ```
-bash /xx/MIIT/train.sh
+conda env create -f environment.yml
 ```
 
-1. The external checkpoint folder arg should be checked
-2. —run_name is the checkpoint name, need to be modified (also change the project name):
-Eg:
---wandb_entity=TPEVGH_big_data_center \
---run_name=OTTER-LLaMA7B-MED_CLIP \
---wandb_project=OTTER-LLaMA7B-MED_CLIP \
+## Generate reports
+### Download Files
+Place our instruction-tuned model [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link] at **./checkpoint/** folder
+Place the CQ500 external validation dataset (instruction [https://drive.google.com/file/d/16W2eoevPB74JN1rJT58hekHMwXL2g6RY/view?usp=drive_link]/ image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link], both derived from [http://headctstudy.qure.ai/#dataset]) at the **./data/** folder
+```
+bash ./eval.sh
+```
+The output excel file will appear at **./Evaluation/pipeline/train/output**
 
 ## Evaluation
-### 1. Generate reports
-```
-bash /xx/evaluation/eval.sh
-```
-Check the 
-(1) eval.py file: change the excel path and instruction
-(2) checkpoint(must be hf folders)
-(3) mimicit_path: the corresponding prompt variation
+### Download Files
+Place the example file [https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true] at **./excel_files/** folder
+Place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true](https://drive.google.com/file/d/1cSa9KYhfXShe7hveNmNXKif9K6SArOE0/view?usp=drive_link)] at **./data/** folder
 
-If your checkpoint's not a "hf" folder, use this converter:
-
-/xx/evaluation/otter/converting_otter_pt_to_hf.py
+### 1. Automatic Evaluation
 ```
-python3 converting_otter_pt_to_hf.py --old_ckpt_path=/xx/checkpoints/{checkpoint_name}/final_weights.pt --new_hf_path=/xx/checkpoints/{checkpoint_name}_hf/ --pretrained_model_path=/xx/checkpoints/OTTER-MPT7B-Init/
+python3 ./automatic_evaluation.py
 ```
 
-Our instruction-tuned model can be downloaded at [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link]
-The CQ500 external validation dataset can be requested at [http://headctstudy.qure.ai/#dataset]
-
-### 2. Automatic Evaluation
+### 2. Sentence pairing
 ```
-python3 /xx/evaluation/automatic_evaluation.py
+python3 ./sentence_pairing.py
 ```
 
-### 3. Sentence pairing and Aggregation
+### 3. FORTE Evaluation
 ```
-python3 /xx/evaluation/sentence_pairing.py
-```
-
-### 4. FORTE Evaluation
-```
-python3 /xx/evaluation/FORTE.py
+python3 ./FORTE.py
 ```
 
 ### 5. Negation removal
 ```
-python3 /xx/evaluation/Negation_removal.py
+python3 ./Negation_removal.py
 ```
