@@ -38,8 +38,6 @@ python3 automatic_evaluation.py
 ```
 *** Please remove the Spice scorer at /pycocoevalcap/eval.py work before running the code. The Spice scorer is not included in the automatic evaluation code. This may avoid potential error and reduce run time.***
 '''
-# Set up scorers
-        # =================================================
         print('setting up scorers...')
         scorers = [
             (Bleu(4), ["Bleu_1", "Bleu_2", "Bleu_3", "Bleu_4"]),
