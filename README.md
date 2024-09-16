@@ -7,6 +7,11 @@
 ## Code
 > this repository is modified from https://github.com/Luodian/Otter
 
+```
+git clone https://github.com/charlierabea/FORTE.git
+cd FORTE
+```
+
 ## Set-up Environment
 ```
 conda env create -f environment.yml
@@ -29,20 +34,20 @@ Place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoV
 
 ### 1. Automatic Evaluation
 ```
-python3 ./automatic_evaluation.py
+python3 automatic_evaluation.py
 ```
 
 ### 2. Sentence pairing
 ```
-python3 ./sentence_pairing.py
+python3 sentence_pairing.py
 ```
 
 ### 3. FORTE Evaluation
 ```
-python3 ./FORTE.py
+python3 FORTE.py
 ```
 
 ### 5. Negation removal
 ```
-python3 ./Negation_removal.py
+python3 Negation_removal.py
 ```
