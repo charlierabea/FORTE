@@ -87,11 +87,11 @@ annotations_path = 'temp_annotations.json'
 results_path = 'temp_results.json'
 
 # Load data
-excel_file_path = '/xx/generated_captions.xlsx'
+excel_file_path = './excel_files/evaluation_examples.xlsx'
 data = load_data_from_excel(excel_file_path)
 
 # Evaluate
 data = evaluate(data, annotations_path, results_path)
 
 # Save updated data to Excel
-save_data_to_excel(data, '/xx/automated_evaluation.xlsx')
+save_data_to_excel(data, './excel_files/automated_evaluation.xlsx')
