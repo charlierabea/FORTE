@@ -9,6 +9,7 @@
 
 ```
 git clone https://github.com/charlierabea/FORTE.git
+
 cd FORTE
 ```
 
