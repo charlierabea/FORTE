@@ -22,7 +22,7 @@ conda env create -f environment.yml
 ### Download Files
 Place our instruction-tuned model [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link] at **./checkpoint/** folder
 
-Place the CQ500 external validation dataset (instruction [https://drive.google.com/file/d/16W2eoevPB74JN1rJT58hekHMwXL2g6RY/view?usp=drive_link]/ image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link], both derived from [http://headctstudy.qure.ai/#dataset]) at the **./data/** folder
+Place the CQ500 external validation dataset (image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link] at the **./data/** folder
 ```
 bash ./eval.sh
 ```
@@ -30,7 +30,6 @@ The output excel file will appear at **./Evaluation/pipeline/train/output**
 
 ## Evaluation
 ### Download Files
-Place the example file [https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true] at **./excel_files/** folder
 Place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true](https://drive.google.com/file/d/1cSa9KYhfXShe7hveNmNXKif9K6SArOE0/view?usp=drive_link)] at **./data/** folder
 
 ### 1. Automatic Evaluation
