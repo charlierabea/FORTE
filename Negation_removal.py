@@ -3,8 +3,8 @@ import ast
 import re
 
 # Replace this with your file's path
-input_file_path = './excel_files/evaluation_examples/FORTE_evaluated.xlsx'
-output_file_path = './excel_files/evaluation_examples/FORTE_negationremoval.xlsx'
+input_file_path = './excel_files/FORTE_evaluated.xlsx'
+output_file_path = './excel_files/FORTE_negationremoval.xlsx'
 
 # Load the Excel file
 xls = pd.ExcelFile(input_file_path)

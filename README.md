@@ -16,6 +16,9 @@ cd FORTE
 ## Set-up Environment
 ```
 conda env create -f environment.yml
+pip install torch
+pip install -r requirements.txt
+conda activate forte
 ```
 
 ## Generate reports

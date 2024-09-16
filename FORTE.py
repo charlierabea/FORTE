@@ -13,7 +13,7 @@ def map_to_synonyms(key, json_data):
     for main_key, synonyms in json_data.items():
         # print(synonyms)
         if key in synonyms:
-            print(key)
+            # print(key)
             return set(synonyms)
     return {key}  # Return a set with the key itself
 
@@ -37,7 +37,7 @@ def calculate_precision_recall(gt_set, out_set, json_data):
     # True positive calculation considering synonyms
     tp = sum(1 for gt_key in gt_representative if any(gt_key in out_synonyms for out_synonyms in map(lambda x: map_to_synonyms((x), json_data), out_representative)))
     
-    print(tp)
+    # print(tp)
 
     fp = len(out_representative) - tp
     fn = len(gt_representative) - tp
@@ -50,29 +50,21 @@ def calculate_precision_recall(gt_set, out_set, json_data):
 
 def process_excel_sheet(sheet_df, json_data):
     for col_prefix in ['degree', 'landmark', 'feature', 'impression']:
-        sheet_df[f'gt_{col_prefix}'] = sheet_df['Processed_Text'].apply(lambda x: list(set(extract_keywords_from_text(x, json_data[col_prefix]))))
-        sheet_df[f'out_{col_prefix}'] = sheet_df['Patient'].apply(lambda x: list(set(extract_keywords_from_text(x, json_data[col_prefix]))))
+        sheet_df[f'gt_{col_prefix}'] = sheet_df['gt'].apply(lambda x: list(set(extract_keywords_from_text(x, json_data[col_prefix]))))
+        sheet_df[f'out_{col_prefix}'] = sheet_df['parsed_output'].apply(lambda x: list(set(extract_keywords_from_text(x, json_data[col_prefix]))))
         
         sheet_df[f'prec_{col_prefix}'], sheet_df[f'recall_{col_prefix}'] = zip(*sheet_df.apply(lambda row: calculate_precision_recall(set(row[f'gt_{col_prefix}']), set(row[f'out_{col_prefix}']), json_data[col_prefix]), axis=1))
 
 
 def process_excel(filename, json_data):
-    # Load all sheets from the Excel file
-    xls = pd.read_excel(filename, sheet_name=None)
-
-    # Process each sheet
-    for sheet_name, sheet_df in xls.items():
-        xls[sheet_name] = process_excel_sheet(sheet_df, json_data)
-
-    # Save modified sheets back to the Excel file
-    with pd.ExcelWriter("./excel_files/evaluation_examples/FORTE_evaluated.xlsx") as writer:
-        for sheet_name, sheet_df in xls.items():
-            sheet_df.to_excel(writer, sheet_name=sheet_name, index=False)
+    xls = pd.read_excel(filename, sheet_name='ABC', engine='openpyxl')
+    process_excel_sheet(xls, json_data)
+    xls.to_excel("./excel_files/FORTE_evaluated.xlsx", index=False)
     
 
 # Load JSON data
 with open('./data/FORTE_brain.json', 'r') as f:
     json_data = json.load(f)
 
-filename = './excel_files/evaluation_examples/sentencepaired_reports.xlsx'
+filename = './excel_files/sentencepaired_reports.xlsx'
 process_excel(filename, json_data)

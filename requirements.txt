@@ -31,3 +31,4 @@ ijson>=3.2.3
 yajl>=0.3.5
 pandas>=1.4.0
 openpyxl
+sentence_transformers
