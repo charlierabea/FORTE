@@ -31,10 +31,10 @@ def process_row(row):
     return results
 
 # Read the Excel file with all sheets
-xls = pd.ExcelFile('/xx/generated_reports.xlsx')
+xls = pd.ExcelFile('./excel_files/evaluation_examples.xlsx')
 sheet_names = xls.sheet_names  # Get all sheet names
 
-with pd.ExcelWriter('/xx/sentencepaired_reports.xlsx') as writer:
+with pd.ExcelWriter('./excel_files/evaluation_examples/sentencepaired_reports.xlsx') as writer:
     for sheet_name in sheet_names:
         df = pd.read_excel(xls, sheet_name=sheet_name)
 
