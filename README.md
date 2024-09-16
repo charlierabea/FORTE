@@ -38,7 +38,7 @@ Place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoV
 
 ### 1. Automatic Evaluation
 ```
-python3 automatic_evaluation.py
+python3 Automatic_evaluation.py
 ```
 ***Please remove the Spice scorer at /pycocoevalcap/eval.py work before running the code. The Spice scorer is not included in the automatic evaluation code. This may avoid potential error and reduce run time.***
 
@@ -55,7 +55,7 @@ python3 automatic_evaluation.py
 
 ### 2. Sentence pairing
 ```
-python3 sentence_pairing.py
+python3 Sentence_pairing.py
 ```
 
 ### 3. FORTE Evaluation
