@@ -5,7 +5,7 @@ CUDA_VISIBLE_DEVICES=1 accelerate launch --config_file=./evaluation/pipeline/acc
 ./evaluation/pipeline/train/eval.py \
 --pretrained_model_name_or_path="./checkpoints/OTTER_CLIP_RADICAL_hf/" \
 --mimicit_path="./data/CQ500p_instruction.json" \
---images_path="/xx/data/CQ500p.json" \
+--images_path="./data/CQ500p.json" \
 --batch_size=1 \
 --warmup_steps_ratio=0.01 \
 --workers=1 \
