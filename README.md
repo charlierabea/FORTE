@@ -24,7 +24,7 @@ conda activate forte
 
 ## Generate reports
 ### Download Files
-Place our instruction-tuned model [https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link] at **./checkpoint/** folder
+Place our instruction-tuned model [[https://drive.google.com/drive/folders/1hBMpnCy9NPuEzjZJtzDByJCk5vLoDAyK?usp=drive_link](https://drive.google.com/drive/folders/1KlbiMsgqfa6YP8hUgO15OIv5eg6UB15U?usp=sharing)] at **./checkpoint/** folder
 
 Place the CQ500 external validation dataset (image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link] at the **./data/** folder
 ```
