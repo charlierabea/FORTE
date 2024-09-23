@@ -16,6 +16,7 @@ cd FORTE
 ## Set-up Environment
 ```
 conda env create -f environment.yml
+# Install the pytorch that matches your cuda version. (e.g. cuda 11.7 torch 2.0.0). We have successfully run this code on cuda 11.1 torch 1.10.1 and cuda 11.7 torch 2.0.0. You can refer to PyTorch's documentation, Latest or Previous.
 pip install torch
 pip install -r requirements.txt
 conda activate forte
