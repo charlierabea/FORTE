@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Generate reports
 ### Download Files
-Place our instruction-tuned model hf folder [https://huggingface.co/Charliebear/BrainGPT] at **./checkpoint/** folder
+Place both the base model [luodian/OTTER-MPT7B-Init] and our instruction-tuned model hf folder [https://huggingface.co/Charliebear/BrainGPT] at **./checkpoint/** folder
 
 Place the CQ500 external validation dataset (image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link] at the **./data/** folder
 ```
