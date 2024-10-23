@@ -20,6 +20,7 @@ conda env create -f environment.yml
 conda activate forte
 pip install torch
 pip install -r requirements.txt
+# You may encounter error in installing Hovorod if your local "cmake" version is too old.
 ```
 
 ## Generate reports
@@ -58,7 +59,7 @@ python3 Automatic_evaluation.py
 python3 Sentence_pairing.py
 ```
 
-### 3. FORTE Evaluation
+### 3. FORTE Evaluation (Keyword lists for Brain CT/ Chest CT/ Abdomen CT/ Chest X-ray are provided)
 ```
 python3 FORTE.py
 ```
