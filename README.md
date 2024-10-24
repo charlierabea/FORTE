@@ -1,6 +1,6 @@
 # Towards a Holistic Framework for Multimodal Large Language Models in Three-dimensional Brain CT Report Generation
 <p align="center" width="100%">
-<img src="overview.png"  width="80%" height="80%">
+<img src="overview.png"  width="81%" height="81%">
 </p>
 [Paper Link](https://arxiv.org/abs/2407.02235)
 
