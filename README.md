@@ -15,6 +15,7 @@ cd FORTE
 
 ## Set-up Environment
 ```
+# GPU with RAM > 36GB is recommended since our checkpoint is 32.54 GB
 conda env create -f environment.yml
 # Otter: Install the pytorch that matches your cuda version. (e.g. cuda 11.7 torch 2.0.0). We have successfully run this code on cuda 11.1 torch 1.10.1 and cuda 11.7 torch 2.0.0. You can refer to PyTorch's documentation, Latest or Previous.
 conda activate forte
