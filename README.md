@@ -36,7 +36,7 @@ The output excel file will appear at **./Evaluation/pipeline/train/output**
 
 ## Evaluation
 ### Download Files
-BrainGPT is fine-tuned based on Otter (luodian/OTTER-MPT7B-Init)
+BrainGPT is fine-tuned based on Otter ([luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init))
 
 Please place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true](https://drive.google.com/file/d/1cSa9KYhfXShe7hveNmNXKif9K6SArOE0/view?usp=drive_link)] at **./data/** folder
 
