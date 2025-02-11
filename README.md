@@ -1,4 +1,6 @@
-# Towards a Holistic Framework for Multimodal Large Language Models in Three-dimensional Brain CT Report Generation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14852686.svg)](https://doi.org/10.5281/zenodo.14852686)
+
+# Towards a Holistic Framework for Multimodal LLM in 3D Brain CT Radiology Report Generation
 <p align="center" width="100%">
 <img src="overview.png"  width="100%" height="100%">
 </p>
