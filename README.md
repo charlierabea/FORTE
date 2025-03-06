@@ -4,7 +4,7 @@
 <p align="center" width="100%">
 <img src="overview.png"  width="100%" height="100%">
 </p>
-[Nature Communications Paper Link]([https://arxiv.org/abs/2407.02235](https://www.nature.com/articles/s41467-025-57426-0#article-info))
+[Nature Communications Paper Link]((https://www.nature.com/articles/s41467-025-57426-0))
 
 
 ## Code
