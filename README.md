@@ -4,7 +4,8 @@
 <p align="center" width="100%">
 <img src="overview.png"  width="100%" height="100%">
 </p>
-[Paper Link](https://arxiv.org/abs/2407.02235)
+[Nature Communications Paper Link]([https://arxiv.org/abs/2407.02235](https://www.nature.com/articles/s41467-025-57426-0#article-info))
+
 
 ## Code
 > this repository is modified from https://github.com/Luodian/Otter
@@ -73,3 +74,18 @@ python3 FORTE.py
 ```
 python3 Negation_removal.py
 ```
+
+## Reference
+
+```
+@article{Li2025,
+  title={Towards a holistic framework for multimodal LLM in 3D brain CT radiology report generation},
+  author={Li, Cheng-Yi and Chang, Kao-Jung and Yang, Cheng-Fu and Wu, Hsin-Yu and Chen, Wenting and Bansal, Hritik and Chen, Ling and Yang, Yi-Ping and Chen, Yu-Chun and Chen, Shih-Pin and Chen, Shih-Jen and Lirng, Jiing-Feng and Chang, Kai-Wei and Chiou, Shih-Hwa},
+  journal={Nature Communications},
+  volume={16},
+  pages={2258},
+  year={2025},
+  doi={10.1038/s41467-025-57426-0}
+}
+```
+Li, CY., Chang, KJ., Yang, CF. et al. Towards a holistic framework for multimodal LLM in 3D brain CT radiology report generation. Nat Commun 16, 2258 (2025). https://doi.org/10.1038/s41467-025-57426-0
