@@ -24,7 +24,7 @@ conda env create -f environment.yml
 conda activate forte
 pip install torch
 pip install -r requirements.txt
-# You may encounter error in installing Hovorod if your local "cmake" version is too old.
+# You may encounter error in installing Hovorod if your local "cmake" version is too old. You can run the inference code without Hovorod installed.
 ```
 
 ## Generate reports
