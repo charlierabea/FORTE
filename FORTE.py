@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 def extract_keywords_from_text(text, json_data):
-    text = str(text).lower()
+    text = f" {text.lower()} "
     keywords = set()
     for key in json_data:
         if key in text:
