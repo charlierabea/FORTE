@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Download Files
 Place both the base model [luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init/tree/main) and our instruction-tuned model hf folder [https://huggingface.co/Charliebear/BrainGPT] at **./checkpoint/** folder
 
-Place the CQ500 external validation dataset (image file [https://drive.google.com/file/d/1iDLx7NqvTg8sBTVViQu5wq8OhPSovAo4/view?usp=drive_link] at the **./data/** folder
+Place the CQ500 external validation dataset (image file [https://drive.google.com/file/d/1H6PK1IOlebREnS9i8WNYUTl-rCNI34RH/view?usp=share_link] at the **./data/** folder
 ```
 bash ./eval.sh
 ```
@@ -41,7 +41,7 @@ The output excel file will appear at **./Evaluation/pipeline/train/output**
 ### Download Files
 BrainGPT is fine-tuned based on Otter ([luodian/OTTER-MPT7B-Init](https://huggingface.co/luodian/OTTER-MPT7B-Init))
 
-Please place the FORTE keyword file [[https://docs.google.com/spreadsheets/d/1NtlDOHDoVNa_xrypH5J79_5ZxL-5mPzM/edit?usp=sharing&ouid=104290583109385210784&rtpof=true&sd=true](https://drive.google.com/file/d/1cSa9KYhfXShe7hveNmNXKif9K6SArOE0/view?usp=drive_link)] at **./data/** folder
+Please place the FORTE keyword file [https://drive.google.com/drive/folders/1aCyAgdGpf6t9_ESp9nnJVKRYAiJp7PZe?usp=share_link] at **./data/** folder
 
 ### 1. Automatic Evaluation
 ```
