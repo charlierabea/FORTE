@@ -2,6 +2,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 from tqdm import tqdm
 import os
+import re
 
 # Set CUDA device
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -12,8 +13,9 @@ model = SentenceTransformer('all-mpnet-base-v2')
 def process_row(row, model):
     gt = str(row['parsed_output'])
     pred = str(row['gt'])
-    gt_sents = gt.strip().split('.')
-    pred_sents = pred.strip().split('.')
+    sent_pattern = r'(?<!\d)\.(?!\d)|\n'
+    gt_sents = re.split(sent_pattern, gt.strip())
+    pred_sents = re.split(sent_pattern, pred.strip())
     gt_sents = [sent.strip() for sent in gt_sents if sent.strip()]
     pred_sents = [sent.strip() for sent in pred_sents if sent.strip()]
 
